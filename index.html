@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Government of India - National Portal Directory</title>
     
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     
-    
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cinzel:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cinzel:wght@400;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         /* Setting 'Inter' as the global default font */
         body {
             font-family: 'Inter', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
         }
         /* Custom class to apply Cinzel (formal, authoritative) for the About section */
         .font-about-panel {
@@ -23,70 +22,132 @@
         /* Custom class for the header title using the elegant calligraphy style (Great Vibes) */
         .font-calligraphy-title {
             font-family: 'Great Vibes', cursive;
-            /* Make it large and distinct */
             font-size: 3.5rem; 
-            /* Added text-shadow for a more dramatic, chiseled look */
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-            font-weight: 400; /* Calligraphy fonts usually only have one weight */
+            font-weight: 400; 
         }
         @media (max-width: 768px) {
             .font-calligraphy-title {
-                font-size: 2.5rem; /* Slightly smaller on mobile */
+                font-size: 2.5rem; 
             }
+        }
+
+        /* --- Official Government Blue Custom Class --- */
+        .bg-govt-blue { background-color: #06038D; }
+        .text-govt-blue { color: #06038D; }
+        .border-govt-blue { border-color: #06038D; }
+        .hover\:bg-govt-blue-dark:hover { background-color: #040260; }
+        .hover\:text-govt-blue-dark:hover { color: #040260; }
+        .focus\:ring-govt-blue:focus { --tw-ring-color: #06038D; }
+
+        /* --- Saffron Button Classes --- */
+        .bg-saffron-btn { background-color: #FF671F; }
+        .hover\:bg-saffron-dark:hover { background-color: #d65113; }
+
+        /* --- India Green Button Classes --- */
+        .bg-india-green { background-color: #046A38; }
+        .hover\:bg-india-green-dark:hover { background-color: #034e29; }
+        .focus\:ring-india-green:focus { --tw-ring-color: #046A38; }
+
+        /* --- High Contrast Mode Styles --- */
+        body.high-contrast {
+            background-color: #000000 !important;
+            color: #FFFF00 !important;
+        }
+        
+        /* Force overrides for High Contrast Mode */
+        body.high-contrast header,
+        body.high-contrast nav,
+        body.high-contrast section,
+        body.high-contrast footer,
+        body.high-contrast div:not(#floatingActions):not(#accessibilityToolbar), 
+        body.high-contrast input {
+            background-color: #000000 !important;
+            background-image: none !important; /* Remove gradients */
+            color: #FFFF00 !important;
+            border-color: #FFFFFF !important;
+            box-shadow: none !important;
+        }
+
+        /* Link Colors in High Contrast */
+        body.high-contrast a {
+            color: #00FFFF !important; /* Cyan for links */
+            text-decoration: underline !important;
+        }
+        body.high-contrast a:hover {
+            color: #FFFFFF !important;
+        }
+        
+        /* Ensure Link Buttons look like buttons in High Contrast */
+        body.high-contrast .link-card a {
+            background-color: #000000 !important;
+            border: 1px solid #00FFFF !important;
+            color: #00FFFF !important;
+            text-decoration: none !important;
+        }
+
+        /* Buttons in High Contrast */
+        body.high-contrast button:not(#accessibilityToggleBtn) {
+            background-color: #000000 !important;
+            color: #FFFF00 !important;
+            border: 2px solid #FFFF00 !important;
+        }
+        body.high-contrast button:not(#accessibilityToggleBtn):hover {
+            background-color: #333333 !important;
+        }
+
+        /* Specific text overrides to ensure visibility */
+        body.high-contrast .text-gray-600,
+        body.high-contrast .text-gray-700,
+        body.high-contrast .text-gray-800,
+        body.high-contrast .text-gray-900,
+        body.high-contrast .text-indigo-200,
+        body.high-contrast .text-indigo-600,
+        body.high-contrast .text-white,
+        body.high-contrast .text-govt-blue {
+            color: #FFFF00 !important;
+        }
+        
+        /* Adjust Images in High Contrast */
+        body.high-contrast img {
+            filter: grayscale(100%) contrast(120%);
+            border: 1px solid #fff;
+        }
+
+        /* Input Fields */
+        body.high-contrast input::placeholder {
+            color: #bbbbbb !important;
         }
     </style>
 </head>
 <body class="bg-sky-50 text-gray-800">
 
-    
-
-<header class="bg-indigo-900 shadow-xl sticky top-0 z-10">
+    <header class="bg-indigo-900 shadow-xl sticky top-0 z-10 transition-colors duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             
-            
-            
-            
-            
-            
-            
-
-<div class="flex items-center space-x-4">
-                
-                
-                
-                
-
-<a href="https://imgbb.com/" class="flex-shrink-0">
+            <div class="flex items-center space-x-4">
+                <a href="https://imgbb.com/" class="flex-shrink-0">
                    <img src="https://i.ibb.co/ymbMYTsT/emblem.jpg" 
                         alt="National Emblem"
                         class="h-12 w-auto object-contain rounded-md"
                         onerror="this.onerror=null; this.src='https://placehold.co/48x48/667EEA/FFFFFF?text=EMBLEM';">
                 </a>
                 
-                
-
-<div class="flex flex-col">
+                <div class="flex flex-col">
                     <h1 class="text-5xl text-white font-calligraphy-title">
                         Government of India
                     </h1>
                 </div>
             </div>
 
-            
-
-<div class="flex items-center space-x-4">
-                
-                
-
-<div class="hidden md:flex space-x-6">
-                    <a href="#about" class="text-indigo-200 hover:text-cyan-300 font-medium transition duration-150">About</a>
-                    <a href="#links" class="text-indigo-200 hover:text-cyan-300 font-medium transition duration-150">Websites</a>
-                    <a href="#schemeSearch" class="text-indigo-200 hover:text-cyan-300 font-medium transition duration-150">Schemes</a>
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex space-x-6">
+                    <a href="#about" class="text-indigo-200 hover:text-yellow-400 font-medium transition duration-150">About</a>
+                    <a href="#links" class="text-indigo-200 hover:text-yellow-400 font-medium transition duration-150">Websites</a>
+                    <a href="#aiAssistant" class="text-indigo-200 hover:text-yellow-400 font-medium transition duration-150">AI Assistant</a>
                 </div>
 
-                
-
-<div class="md:hidden ml-4">
+                <div class="md:hidden ml-4">
                     <button class="text-indigo-200 focus:outline-none p-2 rounded-lg hover:bg-indigo-700">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -94,10 +155,7 @@
                     </button>
                 </div>
                 
-                
-
-
-<a href="https://ibb.co/qLZJBmFR" class="flex-shrink-0">
+                <a href="https://ibb.co/qLZJBmFR" class="flex-shrink-0">
                    <img src="https://i.ibb.co/20bZqcYj/sanskriti-school-pune-logo.jpg" 
                         alt="sanskriti-school-pune-logo" 
                         class="h-12 w-auto object-contain rounded-md">
@@ -106,21 +164,15 @@
         </nav>
     </header>
 
-    
+    <main class="container mx-auto px-6 py-12">
 
-<main class="container mx-auto px-6 py-12">
-
-        
-
-<div class="py-4 mb-10"> 
+        <div class="py-4 mb-10"> 
             <input type="text" id="searchInput" onkeyup="filterLinks()" placeholder="Search government portals (e.g., Passport, Income Tax, NREGA)..."
-                    class="w-full p-4 text-lg rounded-xl border-2 border-indigo-400 bg-white focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500 transition duration-200 shadow-xl">
+                    class="w-full p-4 text-lg rounded-xl border-2 border-indigo-400 bg-white focus:border-govt-blue focus:ring-2 focus:ring-govt-blue transition duration-200 shadow-xl">
         </div>
 
-        
-
-<section id="about" class="mb-16">
-            <div id="aboutContent" class="bg-gradient-to-br from-blue-100 to-sky-100 p-8 rounded-lg shadow-xl border-t-4 border-cyan-500 font-about-panel">
+        <section id="about" class="mb-16">
+            <div id="aboutContent" class="bg-gradient-to-br from-blue-100 to-sky-100 p-8 rounded-lg shadow-xl border-t-4 border-govt-blue font-about-panel transition-colors duration-300">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">The Government of India</h2>
                 
                 <p class="text-lg text-gray-700 leading-relaxed mb-4">
@@ -133,207 +185,173 @@
             </div>
         </section>
 
-        
-
-<section id="links" class="mb-16">
+        <section id="links" class="mb-16">
             <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Official Government Websites & Portals</h2>
-            <div class="bg-blue-50 p-8 rounded-xl shadow-inner">
+            <div class="bg-blue-50 p-8 rounded-xl shadow-inner transition-colors duration-300">
                 
-                
-
-<div id="linksGrid" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div id="linksGrid" class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">National Portal of India</h3>
                             <p class="text-gray-600 text-sm mb-4">The official portal for information and services across the Union.</p>
                         </div>
                         <a href="https://www.india.gov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
                     
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Prime Minister of India (PMO)</h3>
                             <p class="text-gray-600 text-sm mb-4">Official website of the Prime Minister's Office.</p>
                         </div>
                         <a href="https://www.pmindia.gov.in/en/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">President of India</h3>
                             <p class="text-gray-600 text-sm mb-4">Official website of the President's Secretariat.</p>
                         </div>
                         <a href="https://presidentofindia.nic.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Parliament of India (Sansad)</h3>
                             <p class="text-gray-600 text-sm mb-4">Portal for legislative information (Lok Sabha and Rajya Sabha).</p>
                         </div>
                         <a href="https://sansad.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Supreme Court of India</h3>
                             <p class="text-gray-600 text-sm mb-4">The apex judicial body of India.</p>
                         </div>
                         <a href="https://main.sci.gov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">MyGov.in</h3>
                             <p class="text-gray-600 text-sm mb-4">Citizen engagement platform for direct participation in governance.</p>
                         </div>
                         <a href="https://www.mygov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">UIDAI (Aadhaar)</h3>
                             <p class="text-gray-600 text-sm mb-4">Portal for Aadhaar registration, download, and verification services.</p>
                         </div>
                         <a href="https://uidai.gov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Income Tax Department</h3>
                             <p class="text-gray-600 text-sm mb-4">For e-filing of returns, PAN services, and tax-related information.</p>
                         </div>
                         <a href="https://www.incometax.gov.in/iec/foportal/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Digital India Services</h3>
                             <p class="text-gray-600 text-sm mb-4">Flagship program for transforming India into a digitally empowered society.</p>
                         </div>
                         <a href="https://www.digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Incredible India (Tourism)</h3>
                             <p class="text-gray-600 text-sm mb-4">Official website promoting tourism by the Ministry of Tourism.</p>
                         </div>
                         <a href="https://www.incredibleindia.org/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Passport Seva Portal</h3>
                             <p class="text-gray-600 text-sm mb-4">Ministry of External Affairs' portal for passport and related services.</p>
                         </div>
                         <a href="https://www.passportindia.gov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
                     
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">National Scholarship Portal</h3>
                             <p class="text-gray-600 text-sm mb-4">One-stop solution for various scholarship schemes provided by the government.</p>
                         </div>
                         <a href="https://scholarships.gov.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">Make in India</h3>
                             <p class="text-gray-600 text-sm mb-4">Initiative to encourage domestic and international companies to manufacture in India.</p>
                         </div>
                         <a href="https://www.makeinindia.com/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
 
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">e-Courts Services</h3>
                             <p class="text-gray-600 text-sm mb-4">Information on judicial services, case status, and cause lists across courts.</p>
                         </div>
                         <a href="https://ecourts.gov.in/ecourts_home/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
                     
-                    
-
-<div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-cyan-500 hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+                    <div class="link-card bg-white p-6 rounded-xl shadow-lg border-l-4 border-govt-blue hover:shadow-2xl transition duration-300 flex flex-col justify-between">
                         <div>
                             <h3 class="link-name text-xl text-gray-900 font-bold mb-1">MGNREGA Portal (NREGA)</h3>
                             <p class="text-gray-600 text-sm mb-4">Official website for the Mahatma Gandhi National Rural Employment Guarantee Act.</p>
                         </div>
                         <a href="https://nrega.nic.in/" target="_blank" rel="noopener noreferrer" 
-                            class="mt-2 text-center bg-cyan-500 text-white py-2 px-4 rounded-lg hover:bg-cyan-600 transition duration-150 shadow-md font-semibold">
+                            class="mt-2 text-center bg-saffron-btn text-white py-2 px-4 rounded-lg hover:bg-saffron-dark transition duration-150 shadow-md font-semibold">
                             Visit Site
                         </a>
                     </div>
@@ -342,31 +360,32 @@
             </div>
         </section>
 
-        
-
-<section id="schemeSearch" class="mb-16">
-            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Search Government Schemes</h2>
-            <div class="bg-white p-8 rounded-xl shadow-2xl border-b-4 border-indigo-500">
-                <input type="text" id="schemeSearchInput" onkeyup="searchSchemes()" placeholder="Search for schemes (e.g., PM Kisan, Ayushman, water, housing)..."
-                        class="w-full p-4 text-lg rounded-lg border border-indigo-300 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600 transition duration-200 shadow-md">
+        <section id="aiAssistant" class="mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">AI Query Assistant (Powered by Gemini)</h2>
+            <div class="bg-white p-8 rounded-xl shadow-2xl border-b-4 border-govt-blue transition-colors duration-300">
+                <input type="text" id="assistantSearchInput" onkeyup="if(event.key === 'Enter') askAssistant()" placeholder="Ask any query about the Government of India, policies, history, or services..."
+                        class="w-full p-4 text-lg rounded-lg border border-indigo-300 focus:border-govt-blue focus:ring-2 focus:ring-govt-blue transition duration-200 shadow-md">
                 
-                <div id="schemeResults" class="mt-6 p-4 bg-indigo-50 border border-indigo-200 rounded-lg min-h-20 text-gray-600">
-                    
+                <div class="text-center mt-4">
+                     <!-- REPLACEMENT: 'Get Answer' button now uses 'bg-india-green' (#046A38) -->
+                     <button onclick="askAssistant()" 
+                             class="bg-india-green text-white py-2 px-6 rounded-lg font-semibold hover:bg-india-green-dark transition duration-200 shadow-lg focus:outline-none focus:ring-4 focus:ring-india-green">
+                        Get Answer
+                    </button>
+                </div>
 
-</div>
+                <div id="assistantResults" class="mt-6 p-4 bg-indigo-50 border border-indigo-200 rounded-lg min-h-20 text-gray-600">
+                    <p class="text-center font-medium">Type your question above and press 'Get Answer' to use the AI Assistant.</p>
+                </div>
             </div>
         </section>
 
     </main>
 
-    
-
-<footer class="bg-indigo-900 text-indigo-200 p-10 mt-12">
+    <footer class="bg-indigo-900 text-indigo-200 p-10 mt-12 transition-colors duration-300">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
-            
-
-<div>
+            <div>
                 <h3 class="text-xl font-bold text-white mb-4">Union Government</h3>
                 <p class="text-sm">
                     This portal serves as a directory for the key digital presences of the Government of India, promoting digital access and transparent governance.
@@ -377,59 +396,47 @@
                 </div>
             </div>
 
-            
-
-<div>
+            <div>
                 <h3 class="text-xl font-bold text-white mb-4">Key Ministries</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="https://mha.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Ministry of Home Affairs</a></li>
-                    <li><a href="https://www.finmin.nic.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Ministry of Finance</a></li>
-                    <li><a href="https://www.mea.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Ministry of External Affairs</a></li>
-                    <li><a href="https://www.mod.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Ministry of Defence</a></li>
-                    <li><a href="https://www.mohfw.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Ministry of Health & Family Welfare</a></li>
+                    <li><a href="https://mha.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Ministry of Home Affairs</a></li>
+                    <li><a href="https://www.finmin.nic.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Ministry of Finance</a></li>
+                    <li><a href="https://www.mea.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Ministry of External Affairs</a></li>
+                    <li><a href="https://www.mod.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Ministry of Defence</a></li>
+                    <li><a href="https://www.mohfw.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Ministry of Health & Family Welfare</a></li>
                 </ul>
             </div>
 
-            
-
-<div>
+            <div>
                 <h3 class="text-xl font-bold text-white mb-4">Official Sources</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="https://data.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Data.gov.in (Open Data)</a></li>
-                    <li><a href="https://legislative.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Legislative Department</a></li>
-                    <li><a href="https://www.mygov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">MyGov India</a></li>
-                    <li><a href="https://digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition duration-150">Digital India</a></li>
+                    <li><a href="https://data.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Data.gov.in (Open Data)</a></li>
+                    <li><a href="https://legislative.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Legislative Department</a></li>
+                    <li><a href="https://www.mygov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">MyGov India</a></li>
+                    <li><a href="https://digitalindia.gov.in/" target="_blank" rel="noopener noreferrer" class="hover:text-yellow-400 transition duration-150">Digital India</a></li>
                 </ul>
             </div>
             
         </div>
 
-        
-
-<div class="border-t border-indigo-700 pt-6 mt-6 text-center text-sm">
+        <div class="border-t border-indigo-700 pt-6 mt-6 text-center text-sm">
             <p>&copy; 2025 Government of INDIA. All rights reserved.</p>
             <p class="text-sm text-indigo-400 mt-2">This is a non-official page created for informational purposes only, showcasing official portals.</p>
         </div>
     </footer>
 
-    
-
-<div id="floatingActions" class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <div id="floatingActions" class="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
         
-        
-
-<button id="accessibilityToggleBtn" onclick="toggleAccessibilityToolbar()" title="Toggle Accessibility Tools"
-            class="bg-cyan-600 text-white font-bold p-3 rounded-full shadow-2xl hover:bg-cyan-700 transition duration-300 focus:outline-none flex items-center justify-center">
-            
-
-<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <button id="accessibilityToggleBtn" onclick="toggleAccessibilityToolbar()" title="Toggle Accessibility Tools"
+            class="bg-govt-blue text-white font-bold p-3 rounded-full shadow-2xl hover:bg-govt-blue-dark transition duration-300 focus:outline-none flex items-center justify-center">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2c2.76 0 5 2.24 5 5s-2.24 5-5 5-5-2.24-5-5 2.24-5 5-5zm-2 15h4v-3h-4v3zm2 5c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z"/>
             </svg>
         </button>
 
-        
-
-<div id="accessibilityToolbar" class="flex flex-col space-y-2 p-3 bg-white rounded-xl shadow-2xl border border-gray-200 hidden">
+        <!-- Expanded Toolbar -->
+        <div id="accessibilityToolbar" class="flex flex-col space-y-2 p-3 bg-white rounded-xl shadow-2xl border border-gray-200 hidden">
+            <!-- Font Resize -->
             <button onclick="changeFontSize(1)" title="Increase Text Size (A+)"
                 class="bg-indigo-500 text-white font-bold h-10 w-10 rounded-full shadow-md hover:bg-indigo-600 transition duration-300 focus:outline-none flex items-center justify-center text-xl">
                 A+
@@ -438,22 +445,23 @@
                 class="bg-indigo-500 text-white font-bold h-10 w-10 rounded-full shadow-md hover:bg-indigo-600 transition duration-300 focus:outline-none flex items-center justify-center text-xl">
                 A-
             </button>
+            <!-- Contrast Toggle -->
+            <button onclick="toggleContrast()" title="Toggle High Contrast"
+                class="bg-gray-800 text-white font-bold h-10 w-10 rounded-full shadow-md hover:bg-black transition duration-300 focus:outline-none flex items-center justify-center text-xl border border-gray-600">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+            </button>
         </div>
 
-        
-
-<button id="scrollToTopBtn" onclick="scrollToTop()" 
+        <button id="scrollToTopBtn" onclick="scrollToTop()" 
             class="bg-blue-800 text-white p-3 rounded-full shadow-2xl hover:bg-blue-900 transition duration-300 focus:outline-none hidden">
-            
-
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
         </button>
 
     </div>
 
-    
-
-<script>
+    <script>
         // --- Accessibility Constants and State ---
         const ROOT_ELEMENT = document.documentElement;
         const INITIAL_FONT_SIZE_PX = 16;
@@ -472,6 +480,13 @@
         function toggleAccessibilityToolbar() {
             const toolbar = document.getElementById('accessibilityToolbar');
             toolbar.classList.toggle('hidden');
+        }
+
+        /**
+         * Toggles High Contrast Mode.
+         */
+        function toggleContrast() {
+            document.body.classList.toggle('high-contrast');
         }
 
         /**
@@ -512,8 +527,6 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        // --- Core App Functions ---
-
         /**
          * Filters the link cards in the main grid based on search input.
          */
@@ -533,80 +546,135 @@
             }
         }
 
+        // --- Gemini API Setup for AI Assistant ---
+        const API_KEY = ""; // Kept empty, provided by runtime
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${API_KEY}`;
+        const MAX_RETRIES = 5;
+        const ASSISTANT_RESULTS_CONTAINER = document.getElementById('assistantResults');
+
         /**
-         * Data for prominent government schemes.
+         * Utility function to call the Gemini API with exponential backoff.
          */
-        const schemeData = [
-            { name: "PM Kisan Samman Nidhi", ministry: "Agriculture", details: "Provides income support of ₹6,000 per year to eligible farmer families in three installments." },
-            { name: "Ayushman Bharat - PM-JAY", ministry: "Health", details: "World's largest health assurance scheme, providing a health cover of ₹5 lakh per family per year for secondary and tertiary care hospitalization." },
-            { name: "Pradhan Mantri Ujjwala Yojana (PMUY)", ministry: "Petroleum & Natural Gas", details: "Aims to provide clean cooking fuel (LPG) connections to women from poor households, ensuring better health." },
-            { name: "Beti Bachao Beti Padhao (BBBP)", ministry: "Women & Child Development", details: "A national initiative to address the declining Child Sex Ratio (CSR) and empower girl children." },
-            
-            // This section was previously fixed for the SyntaxError
-            
-            { name: "Jal Jeevan Mission (JJM)", ministry: "Jal Shakti", details: "Aims to provide safe and adequate drinking water through individual household tap connections by 2024 to all rural households." },
-            { name: "Swachh Bharat Abhiyan (SBA)", ministry: "Housing and Urban Affairs", details: "A national campaign for universal sanitation coverage and cleanliness efforts across the country." },
-            { name: "Pradhan Mantri Awas Yojana (PMAY)", ministry: "Housing and Urban Affairs", details: "Provides central assistance to urban and rural poor families for constructing or acquiring houses to ensure Housing for All." },
-        ];
+        async function callGeminiApi(payload, retries = 0) {
+            try {
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429 && retries < MAX_RETRIES) {
+                        const delay = Math.pow(2, retries) * 1000 + Math.random() * 1000;
+                        console.log(`Rate limit hit, retrying in ${delay / 1000}s...`);
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        return callGeminiApi(payload, retries + 1);
+                    }
+                    throw new Error(`API call failed with status: ${response.status}`);
+                }
+
+                return response.json();
+            } catch (error) {
+                if (retries < MAX_RETRIES) {
+                    const delay = Math.pow(2, retries) * 1000 + Math.random() * 1000;
+                    console.log(`API error, retrying in ${delay / 1000}s...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    return callGeminiApi(payload, retries + 1);
+                }
+                throw error;
+            }
+        }
         
         /**
-         * Renders the list of schemes into the results container.
-         * @param {Array<Object>} schemes - The filtered array of scheme objects.
+         * Handles user query submission to the Gemini AI Assistant.
          */
-        function renderSchemes(schemes) {
-            const resultsContainer = document.getElementById('schemeResults');
-            resultsContainer.innerHTML = ''; // Clear previous results
+        async function askAssistant() {
+            const inputElement = document.getElementById('assistantSearchInput');
+            const input = inputElement.value.trim();
 
-            if (schemes.length === 0) {
-                resultsContainer.innerHTML = `<p class="text-center text-red-600 font-medium">No results found for your search. Please try broader terms or ministry names.</p>`;
+            // 1. Input Validation
+            if (input.length < 5) {
+                ASSISTANT_RESULTS_CONTAINER.innerHTML = `<p class="text-center text-red-600 font-medium">Please enter a question or phrase of at least 5 characters.</p>`;
                 return;
             }
+
+            // 2. Show Loading State
+            ASSISTANT_RESULTS_CONTAINER.innerHTML = `
+                <div class="flex justify-center items-center py-8">
+                    <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-indigo-600 mr-3"></div>
+                    <span class="text-lg font-semibold text-indigo-700">The AI Assistant is finding an answer for you...</span>
+                </div>
+            `;
             
-            schemes.forEach(scheme => {
-                const card = document.createElement('div');
-                card.className = 'p-3 mb-2 border-b border-indigo-300';
-                card.innerHTML = `
-                    <p class="font-bold text-gray-900">${scheme.name}</p>
-                    <p class="text-sm italic text-indigo-700">Ministry: ${scheme.ministry}</p>
-                    <p class="text-sm">${scheme.details}</p>
-                `;
-                resultsContainer.appendChild(card);
-            });
-        }
+            // 3. Construct API payload
+            const userQuery = `Answer the following question about the Government of India, its policies, departments, history, or services, drawing on current and verifiable facts: "${input}"`;
+            
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                tools: [{ "google_search": {} }], // Enable Google Search grounding
+                systemInstruction: {
+                    parts: [{ text: "You are the official Government of India Portal AI Assistant. Provide a detailed, accurate, and politically neutral answer. Use clear formatting, including headings or bullet points where necessary, to present the information clearly." }]
+                },
+            };
 
-        /**
-         * Searches government schemes and updates the result list.
-         */
-        function searchSchemes() {
-            const input = document.getElementById('schemeSearchInput').value.toLowerCase().trim();
+            // 4. Call API and Render Results
+            try {
+                const result = await callGeminiApi(payload);
+                const candidate = result.candidates?.[0];
 
-            if (input.length < 2) {
-                // If input is empty or too short, show the full list
-                renderSchemes(schemeData);
-                return;
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const text = candidate.content.parts[0].text;
+                    let sources = [];
+
+                    // Extract grounding sources
+                    const groundingMetadata = candidate.groundingMetadata;
+                    if (groundingMetadata && groundingMetadata.groundingAttributions) {
+                        sources = groundingMetadata.groundingAttributions
+                            .map(attribution => ({
+                                uri: attribution.web?.uri,
+                                title: attribution.web?.title,
+                            }))
+                            .filter(source => source.uri && source.title);
+                    }
+
+                    // Render main result text (using a simple prose container for markdown rendering)
+                    ASSISTANT_RESULTS_CONTAINER.innerHTML = `<div class="prose max-w-none">${text}</div>`;
+
+                    // Render sources/citations if available
+                    if (sources.length > 0) {
+                        const sourcesHtml = sources.slice(0, 3).map((s, index) => 
+                            `<a href="${s.uri}" target="_blank" rel="noopener noreferrer" class="text-xs text-blue-600 hover:underline">${s.title}</a>`
+                        ).join(', ');
+
+                        const citationDiv = document.createElement('div');
+                        citationDiv.className = 'mt-4 pt-3 border-t border-indigo-200 text-xs text-gray-500';
+                        citationDiv.innerHTML = `**Sources:** ${sourcesHtml} (Results generated using Gemini and Google Search.)`;
+                        ASSISTANT_RESULTS_CONTAINER.appendChild(citationDiv);
+                    } else {
+                         // Fallback note if no citations are returned but text is
+                         const citationDiv = document.createElement('div');
+                         citationDiv.className = 'mt-4 pt-3 border-t border-indigo-200 text-xs text-gray-500';
+                         citationDiv.innerHTML = `(Results generated using Gemini and Google Search. The model attempts to find the latest data.)`;
+                         ASSISTANT_RESULTS_CONTAINER.appendChild(citationDiv);
+                    }
+
+
+                } else {
+                    ASSISTANT_RESULTS_CONTAINER.innerHTML = `<p class="text-center text-red-600 font-medium">Search failed or no information was found. Please try a different query.</p>`;
+                }
+            } catch (error) {
+                console.error("Assistant query error:", error);
+                ASSISTANT_RESULTS_CONTAINER.innerHTML = `<p class="text-center text-red-600 font-medium">An error occurred during the query. Please check your connection and try again.</p>`;
             }
-
-            const filtered = schemeData.filter(scheme => 
-                scheme.name.toLowerCase().includes(input) || 
-                scheme.details.toLowerCase().includes(input) ||
-                scheme.ministry.toLowerCase().includes(input)
-            );
-
-            renderSchemes(filtered);
         }
 
         // Attach functions to the global window object to make them accessible from HTML
         window.toggleAccessibilityToolbar = toggleAccessibilityToolbar;
         window.changeFontSize = changeFontSize;
+        window.toggleContrast = toggleContrast;
         window.scrollToTop = scrollToTop;
         window.filterLinks = filterLinks;
-        window.searchSchemes = searchSchemes;
-
-        // --- Initialization on Load ---
-        document.addEventListener('DOMContentLoaded', () => {
-            // Display the full list of schemes initially
-            renderSchemes(schemeData);
-        });
+        window.askAssistant = askAssistant;
     </script>
 
 </body>
